@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# エラーが起こった時プログラム停止
+set -e
+
+# homebrew installのスクリプト
+if [ ! -f /opt/homebrew/bin/brew ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# gitクローンのスクリプト
+if [ !  -d ~/dotfiles ]; then
+    cd ~
+    git clone git@github.com:Naoki3016/dotfiles.git
+fi
+
+brew bundle --file=~/dotfiles/Brewfile
+
+# stowを通してホームディレクトリにリンク
+stow -d ~/dotfiles/packages -t ~ zsh
