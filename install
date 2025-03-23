@@ -1,20 +1,25 @@
 #!/bin/sh
-
-# エラーが起こった時プログラム停止
 set -e
 
-# homebrew installのスクリプト
+# Homebrew のインストール
 if [ ! -f /opt/homebrew/bin/brew ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# gitクローンのスクリプト
+# dotfiles のクローン
 if [ !  -d ~/dotfiles ]; then
     cd ~
     git clone git@github.com:Naoki3016/dotfiles.git
 fi
 
+# .DS_Store が存在する場合に削除
+if find ~/dotfiles/packages/ -name ".DS_Store" | grep -q .; then
+    find ~/dotfiles/packages/ -name ".DS_Store" -delete
+    echo "Removed existing .DS_Store files."
+fi
+
+# Homebrew パッケージのインストール
 brew bundle --file=~/dotfiles/Brewfile
 
-# stowを通してホームディレクトリにリンク
-stow -d ~/dotfiles/packages -t ~ zsh
+# stowで繋げる
+stow -v -d ~/dotfiles/packages -t ~ keybindings terminal yabai
