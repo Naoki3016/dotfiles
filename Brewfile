@@ -6,5 +6,5 @@ brew "koekeishiya/formulae/skhd"
 brew "jq"
 brew "tree"
 
-
 cask "alacritty"
+cask "hammerspoon"
