@@ -19,10 +19,10 @@ if find ~/dotfiles/packages/ -name ".DS_Store" | grep -q .; then
 fi
 
 # Homebrew パッケージのインストール
-brew bundle --file=~/dotfiles/.bin/.Brewfile
+brew bundle --file=~/dotfiles/.bin/Brewfile
 
 # stowで繋げる
-stow -v -d ~/dotfiles/packages -t ~ keybindings terminal wm
+stow -v -d ~/dotfiles/packages -t ~ git keybindings terminal wm
 
 # init.lua に設定を追加（既存のものを壊さないようにする）
 if ! grep -q 'stackline' ~/.hammerspoon/init.lua; then
