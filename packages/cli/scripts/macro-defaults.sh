@@ -22,7 +22,7 @@ defaults write "Apple Global Domain" AppleInterfaceStyle -string Dark
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 # Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+defaults writesour com.apple.LaunchServices LSQuarantine -bool false
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 # defaults write com.apple.universalaccess reduceMotion -bool true

@@ -1,5 +1,5 @@
 [user]
-	name       = Naoki3016
+	name       = naoki3016
 	email      = cofpeardq7317@gmail.com
 [alias]
 	s   = status -sb
@@ -11,7 +11,7 @@
 	cob = checkout -b
 	c   = commit
 	cm  = commit -m
-	pso = push origin
+	pso = push origin master
 	pl  = pull
 	plo = pull origin
 	f   = fetch
