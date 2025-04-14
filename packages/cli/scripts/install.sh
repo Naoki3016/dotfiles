@@ -22,9 +22,8 @@ fi
 brew bundle --file=~/dotfiles//Brewfile
 
 # stowで繋げる
-echo 📌 Configuring macOS default settings
 stow -v -d ~/dotfiles/packages -t ~ git keybindings terminal wm
-echo 📌 Configuring macOS default settings
+
 # init.lua に設定を追加（既存のものを壊さないようにする）
 if ! grep -q 'stackline' ~/.hammerspoon/init.lua; then
   echo 'stackline = require "stackline"' >> ~/.hammerspoon/init.lua

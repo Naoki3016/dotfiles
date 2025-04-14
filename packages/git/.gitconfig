@@ -20,11 +20,7 @@
 	excludesfile = ~/.gitignore
 	editor = code --wait
 [init]
-	defaultBranch = main
-[commit]
-	gpgsign = true
-[gpg]
-	program = /usr/local/MacGPG2/bin/gpg
+	defaultBranch = master
 [pull]
 	rebase = false
 [filter "lfs"]
