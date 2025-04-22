@@ -33,7 +33,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain KeyRepeat -int 5
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 ###########################################################
@@ -58,8 +58,8 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode T
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
-defaults write com.apple.dock orientation -string right
-defaults write com.apple.dock tilesize -float 24
+defaults write com.apple.dock orientation -string bottom
+defaults write com.apple.dock tilesize -float 36
 
 ###########################################################
 # Menu Bar
