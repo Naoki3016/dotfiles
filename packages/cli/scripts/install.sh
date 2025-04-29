@@ -22,7 +22,7 @@ fi
 brew bundle --file=~/dotfiles//Brewfile
 
 # stowで繋げる
-stow -v -d ~/dotfiles/packages -t ~ git keybindings terminal wm
+stow -v -d ~/dotfiles/packages -t ~ git keybindings terminal wm cli
 
 # init.lua に設定を追加（既存のものを壊さないようにする）
 if ! grep -q 'stackline' ~/.hammerspoon/init.lua; then
