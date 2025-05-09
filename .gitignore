@@ -1,2 +1,2 @@
-terminal/.config/alacritty/themes/*
+packages/terminal/.config/alacritty/themes/*
 .DS_store
